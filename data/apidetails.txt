@@ -1,0 +1,129 @@
+Login curl 'https://ndhm-dev.bahmni-covid19.in/openmrs/ws/rest/v1/session?v=custom:(uuid)' \
+  -H 'Connection: keep-alive' \
+  -H 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Disable-WWW-Authenticate: true' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'Authorization: Basic c3VwZXJtYW46QWRtaW4xMjMj' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://ndhm-dev.bahmni-covid19.in/bahmni/home/index.html' \
+  -H 'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'Cookie: JSESSIONID=917A0F9482E5FB7D6E755B5805C40A8E; language=en_GB%0D%0A; __openmrs_language=en; app.clinical.grantProviderAccessData=null; bahmni.user.location=%7B%22name%22%3A%22General%20Ward%22%2C%22uuid%22%3A%22baf7bd38-d225-11e4-9c67-080027b662ec%22%7D; reporting_session=917A0F9482E5FB7D6E755B5805C40A8E; bahmni.user=null; bahmni.clinical.retrospectiveEncounterDate=null' \
+  --compressed
+
+
+Create Patient:
+
+curl 'https://ndhm-dev.bahmni-covid19.in/openmrs/ws/rest/v1/bahmnicore/patientprofile' \
+  -H 'Connection: keep-alive' \
+  -H 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"' \
+  -H 'Accept: application/json' \
+  -H 'Disable-WWW-Authenticate: true' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://ndhm-dev.bahmni-covid19.in' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://ndhm-dev.bahmni-covid19.in/bahmni/registration/index.html' \
+  -H 'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'Cookie: JSESSIONID=917A0F9482E5FB7D6E755B5805C40A8E; language=en_GB%0D%0A; __openmrs_language=en; app.clinical.grantProviderAccessData=null; bahmni.user.location=%7B%22name%22%3A%22General%20Ward%22%2C%22uuid%22%3A%22baf7bd38-d225-11e4-9c67-080027b662ec%22%7D; reporting_session=917A0F9482E5FB7D6E755B5805C40A8E; bahmni.user=%22superman%22' \
+  --data-raw '{"patient":{"person":{"names":[{"givenName":"Associate","middleName":"Health","familyName":"Id","display":"Associate Id","preferred":false}],"addresses":[{}],"birthdate":"2000-10-10T16:00:38.457+0530","gender":"M","birthtime":null,"attributes":[{"attributeType":{"uuid":"82325788-3f10-11e4-adec-0800271c1b75"},"voided":true},{"attributeType":{"uuid":"8233a58a-3f10-11e4-adec-0800271c1b75"},"voided":true},{"attributeType":{"uuid":"8234e7b0-3f10-11e4-adec-0800271c1b75"},"voided":true},{"attributeType":{"uuid":"c1f4239f-3f10-11e4-adec-0800271c1b75"},"voided":true},{"attributeType":{"uuid":"c1f455e7-3f10-11e4-adec-0800271c1b75"},"value":"General","hydratedObject":"c1fc20ab-3f10-11e4-adec-0800271c1b75"},{"attributeType":{"uuid":"c1f4a004-3f10-11e4-adec-0800271c1b75"},"voided":true},{"attributeType":{"uuid":"c1f7d1f1-3f10-11e4-adec-0800271c1b75"},"voided":true},{"attributeType":{"uuid":"c1f7fd17-3f10-11e4-adec-0800271c1b75"},"value":"+91-9845348122"},{"attributeType":{"uuid":"c1f825c9-3f10-11e4-adec-0800271c1b75"},"voided":true},{"attributeType":{"uuid":"c1f84df3-3f10-11e4-adec-0800271c1b75"},"voided":true},{"attributeType":{"uuid":"c1f8880d-3f10-11e4-adec-0800271c1b75"},"voided":true},{"attributeType":{"uuid":"3dfdc176-17fd-42b1-b5be-c7e25b78b602"},"voided":true},{"attributeType":{"uuid":"fb3c00b1-81c8-40fe-89e8-6b3344688a13"},"voided":true},{"attributeType":{"uuid":"d1314f0f-c2d9-4223-88d9-ec4d2827c9da"},"voided":true},{"attributeType":{"uuid":"9234695b-0f68-4970-aeb7-3b32d4a2b346"},"voided":true},{"attributeType":{"uuid":"35e98d04-3981-4257-a593-fadd81bfc109"},"voided":true},{"attributeType":{"uuid":"6f32179b-c6b9-465e-a278-c15da2637630"},"voided":true},{"attributeType":{"uuid":"a10fe690-1c44-4ba8-a244-8fe51f9e61f7"},"voided":true},{"attributeType":{"uuid":"0aa9e31b-1cb3-46e2-b2d9-d8d12796534c"},"voided":true}],"deathDate":null,"causeOfDeath":""},"identifiers":[{"identifierSourceUuid":"a1a7e96e-83b3-4c1c-b0c6-f24710e62a97","identifierPrefix":"NAT","identifierType":"0d2ac572-8de3-46c8-9976-1f78899c599f","preferred":false,"voided":false},{"identifierSourceUuid":"c1d8a345-3f10-11e4-adec-0800271c1b75","identifierPrefix":"GAN","identifierType":"81433852-3f10-11e4-adec-0800271c1b75","preferred":true,"voided":false}]},"relationships":[]}' \
+  --compressed
+
+  Load patient:
+
+
+  curl 'https://ndhm-dev.bahmni-covid19.in/openmrs/ws/rest/v1/patient/34f7f447-89a9-44bc-9574-f68ff4602927?v=full' \
+  -H 'Connection: keep-alive' \
+  -H 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Disable-WWW-Authenticate: true' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://ndhm-dev.bahmni-covid19.in/bahmni/clinical/index.html' \
+  -H 'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'Cookie: JSESSIONID=917A0F9482E5FB7D6E755B5805C40A8E; language=en_GB%0D%0A; __openmrs_language=en; app.clinical.grantProviderAccessData=null; bahmni.user.location=%7B%22name%22%3A%22General%20Ward%22%2C%22uuid%22%3A%22baf7bd38-d225-11e4-9c67-080027b662ec%22%7D; reporting_session=917A0F9482E5FB7D6E755B5805C40A8E; bahmni.user=%22superman%22' \
+  --compressed
+
+  Create Visit
+
+  curl 'https://ndhm-dev.bahmni-covid19.in/openmrs/ws/rest/v1/visit' \
+  -H 'Connection: keep-alive' \
+  -H 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Disable-WWW-Authenticate: true' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36' \
+  -H 'Content-Type: application/json;charset=UTF-8' \
+  -H 'Origin: https://ndhm-dev.bahmni-covid19.in' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://ndhm-dev.bahmni-covid19.in/bahmni/registration/index.html' \
+  -H 'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'Cookie: JSESSIONID=917A0F9482E5FB7D6E755B5805C40A8E; language=en_GB%0D%0A; __openmrs_language=en; app.clinical.grantProviderAccessData=null; bahmni.user.location=%7B%22name%22%3A%22General%20Ward%22%2C%22uuid%22%3A%22baf7bd38-d225-11e4-9c67-080027b662ec%22%7D; reporting_session=917A0F9482E5FB7D6E755B5805C40A8E; bahmni.user=%22superman%22' \
+  --data-raw '{"patient":"813ab41d-9bf7-4aa2-85ea-67a785488bf8","visitType":"c22a5000-3f10-11e4-adec-0800271c1b75","location":"c1e42932-3f10-11e4-adec-0800271c1b75"}' \
+  --compressed
+
+  Create medication
+  curl 'https://ndhm-dev.bahmni-covid19.in/openmrs/ws/rest/v1/bahmnicore/bahmniencounter' \
+  -H 'Connection: keep-alive' \
+  -H 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Disable-WWW-Authenticate: true' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36' \
+  -H 'Content-Type: application/json;charset=UTF-8' \
+  -H 'Origin: https://ndhm-dev.bahmni-covid19.in' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://ndhm-dev.bahmni-covid19.in/bahmni/clinical/index.html' \
+  -H 'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'Cookie: JSESSIONID=917A0F9482E5FB7D6E755B5805C40A8E; language=en_GB%0D%0A; __openmrs_language=en; app.clinical.grantProviderAccessData=null; bahmni.user.location=%7B%22name%22%3A%22General%20Ward%22%2C%22uuid%22%3A%22baf7bd38-d225-11e4-9c67-080027b662ec%22%7D; reporting_session=917A0F9482E5FB7D6E755B5805C40A8E; bahmni.user=%22superman%22' \
+  --data-raw '{"locationUuid":"baf7bd38-d225-11e4-9c67-080027b662ec","patientUuid":"813ab41d-9bf7-4aa2-85ea-67a785488bf8","encounterUuid":null,"visitUuid":null,"providers":[{"uuid":"c1c26908-3f10-11e4-adec-0800271c1b75"}],"encounterDateTime":null,"extensions":{"mdrtbSpecimen":[]},"context":{},"visitType":"OPD","bahmniDiagnoses":[],"orders":[],"drugOrders":[{"careSetting":"OUTPATIENT","drug":{"name":"Paracetamol 500mg","form":"Tablet","uuid":"d9c230a5-89d8-4e4d-b08b-2af3b1234c80"},"orderType":"Drug Order","dosingInstructionType":"org.openmrs.module.bahmniemrapi.drugorder.dosinginstructions.FlexibleDosingInstructions","dosingInstructions":{"dose":2,"doseUnits":"Tablet(s)","route":"Oral","frequency":"Thrice a day","asNeeded":false,"administrationInstructions":"{\"instructions\":\"As directed\"}","quantity":18,"quantityUnits":"Tablet(s)","numberOfRefills":0},"duration":3,"durationUnits":"Day(s)","scheduledDate":null,"autoExpireDate":null,"dateStopped":null,"orderGroup":{"orderSet":{}}}],"disposition":null,"observations":[],"encounterTypeUuid":"81852aee-3f10-11e4-adec-0800271c1b75"}' \
+  --compressed
+
+
+  View all drug orders
+  curl 'https://ndhm-dev.bahmni-covid19.in/openmrs/ws/rest/v1/bahmnicore/drugOrders?includeActiveVisit=true&numberOfVisits=3&patientUuid=813ab41d-9bf7-4aa2-85ea-67a785488bf8' \
+  -H 'Connection: keep-alive' \
+  -H 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Disable-WWW-Authenticate: true' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://ndhm-dev.bahmni-covid19.in/bahmni/clinical/index.html' \
+  -H 'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'Cookie: JSESSIONID=917A0F9482E5FB7D6E755B5805C40A8E; language=en_GB%0D%0A; __openmrs_language=en; app.clinical.grantProviderAccessData=null; bahmni.user.location=%7B%22name%22%3A%22General%20Ward%22%2C%22uuid%22%3A%22baf7bd38-d225-11e4-9c67-080027b662ec%22%7D; reporting_session=917A0F9482E5FB7D6E755B5805C40A8E; bahmni.user=%22superman%22' \
+  --compressed
+
+  End a visit
+  curl 'https://ndhm-dev.bahmni-covid19.in/openmrs/ws/rest/v1/bahmnicore/visit/endVisit?visitUuid=0771d372-2c6f-4ed0-8eed-6370a0115a0d' \
+  -H 'Connection: keep-alive' \
+  -H 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Disable-WWW-Authenticate: true' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36' \
+  -H 'Content-Type: application/json;charset=UTF-8' \
+  -H 'Origin: https://ndhm-dev.bahmni-covid19.in' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://ndhm-dev.bahmni-covid19.in/bahmni/registration/index.html' \
+  -H 'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'Cookie: JSESSIONID=917A0F9482E5FB7D6E755B5805C40A8E; language=en_GB%0D%0A; __openmrs_language=en; app.clinical.grantProviderAccessData=null; bahmni.user.location=%7B%22name%22%3A%22General%20Ward%22%2C%22uuid%22%3A%22baf7bd38-d225-11e4-9c67-080027b662ec%22%7D; reporting_session=917A0F9482E5FB7D6E755B5805C40A8E; bahmni.user=%22superman%22' \
+  --data-raw '{"withCredentials":true}' \
+  --compressed
