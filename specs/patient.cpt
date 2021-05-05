@@ -1,0 +1,6 @@
+# Receptionist Registers a patient with first name <firstName> last name <lastName> gender <gender> year of birth <year> by assciating healthID <healthID>
+* Delete the patient details with first name <firstName>, last name <lastName>, gender <gender> and year <year>
+* Create a patient with first name <firstName> last name <lastName> gender <gender> year of birth <year>
+
+# Delete the patient details with first name <firstName>, last name <lastName>, gender <gender> and year <year>
+* Delete the patient with first name <firstName>, last name <lastName>, gender <gender> and year <year>
