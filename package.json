@@ -6,6 +6,6 @@
   },
   "dependencies": {
     "axios": "latest",
-    "browserify":"latest"
+    "browserify": "latest"
   }
 }

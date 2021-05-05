@@ -52,3 +52,53 @@ async function receptionistLogin(){
     throw error
   })
 }
+
+step("Login as a receptionist", async function() {
+  var sessionId = await searchPatient();
+  var careContextAPIs = await invokeCareContextAPI()
+
+  for(var i=0;i<careContextAPIs.data.length;i++){
+    console.log(careContextAPIs.data[i])
+  }
+
+  console.log(sessionId)
+});
+
+function gettSeesionDetails(){
+  const access_token = process.env.receptionist 
+
+  var bahmniHost = process.env.bahmniHost;
+  var sessionAPI = process.env.sessionAPI;
+
+  return axios.get(bahmniHost+"/"+sessionAPI, {
+    params: { v: 'custom:(uuid)' },
+    headers: {
+      'Authorization': `Basic ${access_token}`
+    }
+  }).then((res) => {
+    return res.data.sessionId
+  })
+  .catch((error) => {
+    throw error
+  });;
+}
+
+function searchPatient( ){
+  const access_token = process.env.receptionist 
+
+  var bahmniHost = process.env.bahmniHost;
+  var searchPatientAPI = process.env.searchPatient;
+
+  return axios.get(bahmniHost+"/"+searchPatientAPI+process.env.associateHealthIdPatient, {
+    params: { v: 'full'},
+    headers: {
+      'Authorization': `Basic ${access_token}`
+    }, 
+    data: ''
+  }).then((res) => {
+    return res.data
+  })
+  .catch((error) => {
+    throw error
+  });;
+}

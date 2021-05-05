@@ -1,6 +1,7 @@
 # Fetch Patient Details into PR app
 
 ## Should be able to fetch test reports from PR app
+* Login as a receptionist
 * Receptionist Start an OPD for patient with first name "firstName" last name "LastName" gender "F" and year of birth "1999"
 * Doctor prescribes medication for patient
 |Drug Name|Dose|Units|
